@@ -1,0 +1,48 @@
+:root{--ink:#25172f;--bg:#f7f1fb;--gold:#f0a202;--rose:#b5179e;--pink:#ff4d9d;--line:#e5d8f0}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:16px/1.55 system-ui,sans-serif;background:radial-gradient(circle at 90% 0,#ffd6ec 0,transparent 35%),radial-gradient(circle at 0 40%,#e4d4ff 0,transparent 35%),var(--bg);background-attachment:fixed}
+h1,h2{font-family:Georgia,serif;margin:.7em 0 .3em}
+h2{display:inline-block;border-bottom:3px solid var(--gold);padding-bottom:2px}
+nav{position:sticky;top:0;z-index:5;background:linear-gradient(90deg,#25172f,#4a1d5e);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:12px 28px;flex-wrap:wrap;gap:8px;box-shadow:0 4px 18px #25172f40}
+nav b{font:700 24px Georgia,serif;color:var(--gold);letter-spacing:.5px}
+nav a{color:#fff;margin-left:20px;text-decoration:none;padding-bottom:3px;border-bottom:2px solid transparent}nav a:hover{color:var(--gold);border-color:var(--gold)}
+main{max-width:1100px;margin:0 auto;padding:16px 24px 48px}
+footer{background:var(--ink);color:#d9cce6;text-align:center;padding:24px 16px;margin-top:40px;font-size:14px}
+footer::before{content:"EventEase \00b7  Plan birthdays, weddings, anniversaries and baby showers online";display:block;color:var(--gold);font:700 18px Georgia,serif;margin-bottom:4px}
+input,select,button{font:inherit;padding:10px 14px;border-radius:10px;border:1px solid var(--line);margin:4px 0;max-width:100%;background:#fff}
+input,aside select{width:100%}
+input:focus,select:focus{border-color:var(--rose)}
+button{background:linear-gradient(135deg,var(--rose),var(--pink));color:#fff;border:0;cursor:pointer;font-weight:600;box-shadow:0 4px 12px #b5179e40;transition:transform .15s,box-shadow .15s}
+button:hover{transform:translateY(-1px);box-shadow:0 8px 18px #b5179e55}
+button:disabled{opacity:.5;cursor:wait}
+button.ghost{background:#fff;color:var(--rose);border:1.5px solid var(--rose);box-shadow:none}
+button.ghost:hover{background:#fdeaf6}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.hero{background:radial-gradient(circle at 10% 30%,#f0a20266 0 7px,transparent 8px),radial-gradient(circle at 88% 22%,#ff6ec788 0 10px,transparent 11px),radial-gradient(circle at 72% 78%,#ffffff44 0 6px,transparent 7px),radial-gradient(circle at 28% 82%,#f0a20255 0 9px,transparent 10px),radial-gradient(circle at 95% 95%,#ff4d9d99,transparent 40%),linear-gradient(120deg,#25172fee,#8e1a8acc),url(images/hero.jpg) center/cover,#25172f;color:#fff;border-radius:20px;padding:60px 32px 88px;margin:14px 0 0}
+.hero h1{font-size:clamp(30px,5.5vw,52px);margin:0 0 10px;line-height:1.1}
+.hero p{margin:0;font-size:19px;max-width:560px;color:#ffeaf6}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:-52px;position:relative}
+.two form{background:#fff;padding:20px 22px 24px;border-radius:16px;border:1px solid var(--line);border-top:5px solid var(--gold);box-shadow:0 12px 30px #25172f26}
+.two h2{margin-top:.2em}
+.msg{color:var(--rose);min-height:1.5em;font-weight:600}
+.layout{display:grid;grid-template-columns:1fr 330px;gap:26px}
+.card{display:grid;grid-template-columns:150px 1fr auto auto;gap:14px;align-items:center;background:#fff;border:2px solid transparent;border-left:6px solid var(--line);border-radius:14px;padding:10px;margin:10px 0;box-shadow:0 3px 10px #25172f14;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 26px #25172f26}
+.card.on{border-color:var(--gold);background:#fffaf0;box-shadow:0 0 0 4px #f0a20233}
+.card img{width:150px;height:100px;object-fit:cover;border-radius:10px;transition:transform .3s}
+.card:hover img{transform:scale(1.04)}
+aside{background:#fff;border:1px solid var(--line);border-top:6px solid var(--rose);border-radius:16px;padding:18px;align-self:start;position:sticky;top:76px;box-shadow:0 10px 28px #25172f22}
+.total{font:700 44px Georgia,serif;margin:0;padding:4px 0 10px;background:linear-gradient(90deg,var(--rose),#ff6b35);-webkit-background-clip:text;background-clip:text;color:transparent}
+#chosen{list-style:none;padding:0;margin:0 0 8px}
+#chosen li{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px dashed var(--line);font-size:14px}
+table{display:block;overflow-x:auto;width:100%;border-collapse:collapse;background:#fff;border-radius:14px;box-shadow:0 4px 16px #25172f18}
+th{background:var(--ink);color:#fff;font-weight:600}
+th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}
+tr:nth-child(even) td{background:#faf5fd}
+.s-Approved{color:#1b7f3b;font-weight:700}.s-Rejected{color:#b00020;font-weight:700}.s-Pending{color:#9a6700;font-weight:700}.s-Cancelled{color:#777;font-weight:700}
+td[class^="s-"]::before{content:"\25CF  "}
+.row{display:flex;gap:6px;flex-wrap:wrap}
+#modal{display:none;position:fixed;inset:0;z-index:10;background:#25172fcc;align-items:center;justify-content:center;padding:16px}
+#mbody{background:#fff;border-radius:16px;padding:16px;max-width:460px;border-top:6px solid var(--gold)}#mbody img{width:100%;border-radius:10px}
+@media(max-width:800px){.layout,.two{grid-template-columns:1fr}aside{position:static}}
+@media(max-width:600px){.card{grid-template-columns:100px 1fr}.card img{width:100px;height:70px}.card button{grid-column:1/-1}nav a{margin-left:12px}}
